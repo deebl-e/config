@@ -1,0 +1,181 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+#TODO: make all the text ExtraBold except the directory
+
+format = """
+[](love)\
+$os\
+$username\
+[](fg:love bg:gold)\
+$git_branch\
+$git_status\
+[](fg:gold bg:foam)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:foam bg:pine)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:pine bg:overlay)\
+$time\
+[ ](fg:overlay)\
+$line_break\
+$directory\
+$character"""
+
+palette = 'rose-pine'
+
+[palettes.rose-pine]
+base = '#191724'
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
+
+[os]
+disabled = false
+style = "bg:love fg:base"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:love fg:base"
+style_root = "bg:love fg:base"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:rose"
+format = "[ $path ]($style)"
+truncation_length = 10
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:gold"
+format = '[[ $symbol $branch ](fg:base bg:gold)]($style)'
+
+[git_status]
+style = "bg:gold"
+format = '[[($all_status$ahead_behind )](fg:base bg:gold)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[c]
+symbol = " "
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[php]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[java]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[python]
+symbol = ""
+style = "bg:foam"
+format = '[[ $symbol( $version) ](fg:base bg:foam)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:pine"
+format = '[[ $symbol( $context) ](fg:#83a598 bg:pine)]($style)'
+
+[conda]
+style = "bg:pine"
+format = '[[ $symbol( $environment) ](fg:#83a598 bg:pine)]($style)'
+
+[pixi]
+style = "bg:pine"
+format = '[[ $symbol( $version)( $environment) ](fg:base bg:pine)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:overlay"
+format = '[[  $time ](bg:overlay)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:rose)'
+error_symbol = '[](bold fg:rose)'
+vimcmd_symbol = '[](bold fg:rose)'
+vimcmd_replace_one_symbol = '[](bold fg:rose)'
+vimcmd_replace_symbol = '[](bold fg:rose)'
+vimcmd_visual_symbol = '[](bold fg:rose)'
