@@ -1,5 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = false
+
 format = """
 [](love)\
 $os\
@@ -71,7 +73,7 @@ Pop = ""
 [username]
 show_always = true
 style_user = "bg:love fg:base"
-style_root = "bg:love fg:base"
+style_root = "bold bg:love fg:base"
 format = '[ $user ]($style)'
 
 [directory]
