@@ -97,5 +97,9 @@ alias ..="cd .."
 # Thank you redditor
 alias gh="cat $HISTFILE | grep"
 
+# This one shows a simple but cool clock
+# Needs extra fonts pack: https://github.com/xero/figlet-fonts
+alias clock="watch -n 1 'date +%H%t%M%t%S | figlet -f ROMAN'"
+
 alias vi="nvim"
 alias vim="nvim"
