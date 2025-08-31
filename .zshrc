@@ -15,7 +15,7 @@ bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 
 # History
-HISTFILE=~/.zsh/history
+HISTFILE=~/.zsh_history
 [ ! -d $HISTFILE ] && mkdir -p "$(dirname $HISTFILE)" && touch "$HISTFILE"
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
