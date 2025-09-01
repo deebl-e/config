@@ -5,13 +5,6 @@
 bindkey -e
 # Cycle history for current command
 bindkey "^p" history-search-backward
-bindkey "^n"# A LOT comes from this video: https://www.youtube.com/watch?v=ud7YxC33Z3w
-# Its great
-
-# Keybindings
-bindkey -e
-# Cycle history for current command
-bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 
 # History
