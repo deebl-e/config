@@ -44,8 +44,11 @@ eval "$(starship init zsh)"
 
 # Aliases
 alias ..="cd .."
+
 # Thank you redditor
 alias gh="cat $HISTFILE | grep"
 
 alias vi="nvim"
-alias vim="nvim" history-search-forward
+alias vim="nvim"
+
+alias clock="watch -n 1 'date +%H%t%M%t%S | figlet -f Roman'"
